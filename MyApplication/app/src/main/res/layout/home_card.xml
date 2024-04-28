@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="500dp"
+    android:layout_marginTop="5dp"
+    app:cardCornerRadius="10dp"
+    app:cardUseCompatPadding="true"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_profileimg"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_gravity="center_vertical"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toTopOf="@+id/tvName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:padding="5dp"
+            android:id="@+id/tvName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/tvProfileDetails"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_profileimg"
+            tools:text="NAME" />
+
+        <TextView
+            android:padding="5dp"
+            android:id="@+id/tvProfileDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/lntBtns"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvName"
+            tools:text="age yers" />
+
+        <LinearLayout
+            android:padding="5dp"
+            android:id="@+id/lntBtns"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnYes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:minWidth="5dp"
+                android:minHeight="5dp"
+                android:text="Yes"
+                android:textSize="12sp"
+                app:backgroundTint="@color/teal_200"
+                app:cornerRadius="20dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:minWidth="5dp"
+                app:backgroundTint="@color/white"
+                android:textColor="@color/black"
+                android:minHeight="5dp"
+                android:text="No"
+                android:textSize="12sp"
+                app:cornerRadius="20dp" />
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>
